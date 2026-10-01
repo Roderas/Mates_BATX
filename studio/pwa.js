@@ -1,0 +1,13 @@
+(function(){'use strict';
+const $=id=>document.getElementById(id);let prompt=null,registration=null,ready=false,had=!!navigator.serviceWorker?.controller,reloading=false;
+function status(){const e=$('offline-status');e.classList.toggle('ready',ready);if(location.protocol==='file:'||!isSecureContext||!('serviceWorker' in navigator)){e.textContent='Cal un context HTTPS compatible';return;}e.textContent=ready?(navigator.onLine?'Disponible sense connexi\u00f3':'Offline \u00b7 app disponible'):(navigator.onLine?'Preparant c\u00f2pia offline\u2026':'C\u00f2pia offline no confirmada');$('install-app').hidden=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;}
+function info(w){return new Promise((resolve,reject)=>{if(!w){reject(new Error('Cap worker'));return;}const c=new MessageChannel(),t=setTimeout(()=>{c.port1.close();reject(new Error('Sense resposta'));},5000);c.port1.onmessage=e=>{clearTimeout(t);c.port1.close();resolve(e.data);};w.postMessage({type:'STATUS'},[c.port2]);});}
+async function confirm(){try{const s=await info(registration?.active);ready=s.ready===true;status();}catch(_){$('offline-status').textContent='Offline no confirmat';}}
+function available(){$('update-banner').hidden=!registration?.waiting;}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();prompt=e;});$('install-app').onclick=async()=>{if(!prompt){window.StudioApp.help();return;}const p=prompt;prompt=null;try{await p.prompt();await p.userChoice;}catch(_){window.StudioApp.help();}};
+$('update-app').onclick=()=>{if(registration?.waiting){$('update-app').disabled=true;registration.waiting.postMessage({type:'SKIP_WAITING'});}};
+window.addEventListener('appinstalled',()=>{prompt=null;status();});window.addEventListener('online',status);window.addEventListener('offline',status);matchMedia('(display-mode: standalone)').addEventListener('change',status);status();
+if(!('serviceWorker' in navigator)||!isSecureContext||location.protocol==='file:'){$('offline-status').textContent='Cal HTTPS per instal\u00b7lar';return;}
+navigator.serviceWorker.addEventListener('controllerchange',()=>{if(had&&!reloading){reloading=true;location.reload();return;}had=true;confirm();});
+navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'}).then(async r=>{registration=r;available();r.addEventListener('updatefound',()=>{const w=r.installing;w?.addEventListener('statechange',()=>{if(w.state==='installed')available();if(w.state==='activated')confirm();if(w.state==='redundant'&&!ready)$('offline-status').textContent='C\u00f2pia incompleta: recarrega';});});await navigator.serviceWorker.ready;await confirm();}).catch(()=>{$('offline-status').textContent='Error preparant offline';});
+})();
