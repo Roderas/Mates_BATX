@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ca">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#2f5d8a">
+ <meta name="description" content="Guia docent de matematiques de batxillerat amb eines locals, grafiques i seguiment PAU.">
+ <meta name="referrer" content="no-referrer">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="default">
+ <meta name="apple-mobile-web-app-title" content="Mates Docent">
+ <meta name="mobile-web-app-capable" content="yes">
+ <title>Mates Batxillerat &#183; Guia docent</title>
+ <link rel="manifest" href="./manifest.json">
+ <link rel="icon" href="./favicon.ico" sizes="any">
+ <link rel="icon" href="./icons/icon-32.png" type="image/png" sizes="32x32">
+ <link rel="apple-touch-icon" href="./icons/icon-180.png" sizes="180x180">
+ <link rel="apple-touch-icon" href="./icons/icon-167.png" sizes="167x167">
+ <link rel="apple-touch-icon" href="./icons/icon-152.png" sizes="152x152">
+ <link rel="stylesheet" href="./css/styles.css">
+ <link rel="stylesheet" href="./css/pwa.css">
+ <script defer src="./js/utils.js"></script>
+ <script defer src="./data/topics.js"></script>
+ <script defer src="./data/examples.js"></script>
+ <script defer src="./js/math.js"></script>
+ <script defer src="./js/graph.js"></script>
+ <script defer src="./js/tools.js"></script>
+ <script defer src="./js/solver.js"></script>
+ <script defer src="./js/app.js"></script>
+ <script defer src="./js/pwa.js"></script>
+</head>
+<body>
+<div class="studio-back"><a href="./">&larr; Solucionador amb passos</a><span>Guia docent original conservada</span></div>
+ <a href="#m" class="skip-link">Anar al contingut</a>
+ <header>
+  <img src="./icons/icon-48.png" width="38" height="38" alt="" class="brand-icon">
+  <h1>Mates Batxillerat <span>&#183; Guia docent</span></h1>
+  <div class="header-actions">
+   <button id="install" type="button">Instal&#183;lar</button>
+   <button id="theme" type="button" aria-label="Canviar entre tema clar i fosc" title="Tema clar / fosc">&#9680;</button>
+   <button id="help" type="button" aria-label="Ajuda, instal&#183;laci&#243; i dades" title="Ajuda">?</button>
+  </div>
+ </header>
+ <div class="app-status" role="status" aria-live="polite"><span id="offline-status">Preparant l&#8217;app&#8230;</span><span class="status-right"><span id="app-version">PWA 1.0.0</span><button type="button" id="update" hidden>Actualitzar</button></span></div>
+ <nav id="nav" aria-label="Temes de la guia"></nav>
+ <main id="m" tabindex="-1"><p>Carregant les eines&#8230;</p></main>
+ <noscript><div class="c">Cal activar JavaScript per utilitzar els resolutors. Aquesta app executa els c&#224;lculs al dispositiu.</div></noscript>
+ <footer>Conversi&#243; de l&#8217;HTML aportat &#183; Dades locals, sense compte ni anal&#237;tica.<br><button class="text-button" type="button" id="help-footer">Instal&#183;laci&#243;, c&#242;pia de seguretat i l&#237;mits de l&#8217;eina</button></footer>
+ <dialog id="help-dialog" aria-labelledby="help-title">
+  <div class="dialog-heading"><h2 id="help-title">Instal&#183;laci&#243; i ajuda</h2><button id="close-help" type="button" class="secondary" aria-label="Tancar ajuda">Tancar</button></div>
+  <section>
+   <h3>Al port&#224;til, m&#242;bil i tauleta</h3>
+   <p><strong>Chrome o Edge:</strong> utilitza &#171;Instal&#183;lar&#187; quan el navegador ho permeti, o l&#8217;opci&#243; d&#8217;instal&#183;laci&#243; del men&#250;.</p>
+   <p><strong>iPhone / iPad:</strong> obre la web a Safari, toca Compartir i &#171;Afegir a la pantalla d&#8217;inici&#187;. Activa &#171;Obrir com a app web&#187; quan aparegui.</p>
+   <p><strong>Mac amb Safari compatible:</strong> utilitza l&#8217;opci&#243; d&#8217;afegir al Dock. Si el navegador no ofereix instal&#183;laci&#243;, continua utilitzant la web o obre-la amb un navegador compatible.</p>
+   <p>Cal obrir la web publicada amb HTTPS. Un fitxer obert amb doble clic (<code>file://</code>) no permet instal&#183;lar aquesta PWA.</p>
+  </section>
+  <section>
+   <h3>Sense connexi&#243; i actualitzacions</h3>
+   <p>Obre l&#8217;app amb internet i espera el missatge <strong>&#171;Disponible sense connexi&#243;&#187;</strong>. Les pantalles, els exemples i els c&#224;lculs locals quedaran desats al navegador. Els enlla&#231;os externs continuen necessitant internet.</p>
+   <p>El navegador pot eliminar les dades locals si es neteja l&#8217;emmagatzematge. La c&#242;pia de seguretat desa les marques PAU, el tema i els darrers valors introdu&#239;ts. No sincronitza dispositius.</p>
+   <button id="check-update" type="button" class="secondary">Comprovar actualitzacions</button>
+   <p id="help-status" class="mu" role="status"></p>
+  </section>
+  <section>
+   <h3>Les teves dades</h3>
+   <div class="tool-actions"><button id="export-data" type="button" class="b">Exportar c&#242;pia JSON</button><button id="import-data" type="button" class="secondary">Importar c&#242;pia JSON</button></div>
+   <input type="file" accept="application/json,.json" id="backup-file" hidden>
+   <p id="data-status" class="mu" role="status"></p>
+  </section>
+  <section>
+   <h3>Abast d&#8217;aquesta conversi&#243;</h3>
+   <p>S&#8217;han conservat els temes, les f&#243;rmules i els 15 exemples de l&#8217;HTML aportat. El quadre PAU &#233;s <strong>manual</strong>: no &#233;s una nova comparativa oficial dels ex&#224;mens.</p>
+   <p>Les derivades utilitzen un motor simb&#242;lic elemental. Els zeros, les &#224;rees i els punts candidats utilitzen m&#232;todes num&#232;rics. No s&#8217;accepten integrals impr&#242;pies; no es demostra el domini, l&#8217;exist&#232;ncia de l&#237;mits ni tots els extrems a partir del mostreig. No &#233;s un sistema algebraic universal ni una revisi&#243; completa del contingut docent.</p>
+   <p class="mu">Documentaci&#243; t&#232;cnica: <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable" target="_blank" rel="noopener noreferrer">MDN</a> &#183; <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site" target="_blank" rel="noopener noreferrer">GitHub Pages</a> &#183; <a href="https://support.apple.com/guide/iphone/iphea86e5236/ios" target="_blank" rel="noopener noreferrer">Safari a iPhone</a></p>
+  </section>
+ </dialog>
+</body>
+</html>

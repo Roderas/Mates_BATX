@@ -1,0 +1,93 @@
+'use strict';
+// Do not edit the resource list by hand. Run: python scripts/build-sw.py
+const VERSION='2.0.0';
+const REVISION='3095868f246d7924';
+const CACHE_PREFIX='mates-docent-installable:'+new URL(self.registration.scope).pathname+':';
+const CACHE_NAME=CACHE_PREFIX+VERSION+'-'+REVISION;
+const ASSETS=[
+  "./",
+  "./index.html",
+  "./docent.html",
+  "./manifest.json",
+  "./favicon.ico",
+  "./css/pwa.css",
+  "./css/styles.css",
+  "./data/examples.js",
+  "./data/topics.js",
+  "./js/app.js",
+  "./js/graph.js",
+  "./js/math.js",
+  "./js/pwa.js",
+  "./js/solver.js",
+  "./js/tools.js",
+  "./js/utils.js",
+  "./icons/icon-152.png",
+  "./icons/icon-167.png",
+  "./icons/icon-180.png",
+  "./icons/icon-192.png",
+  "./icons/icon-32.png",
+  "./icons/icon-48.png",
+  "./icons/icon-512.png",
+  "./icons/maskable-192.png",
+  "./icons/maskable-512.png",
+  "./studio/app.js",
+  "./studio/config.js",
+  "./studio/engine.js",
+  "./studio/graph.js",
+  "./studio/pwa.js",
+  "./studio/styles.css",
+  "./studio/worker.js"
+];
+const absolute=name=>new URL(name,self.registration.scope).href;
+const assetURLs=new Set(ASSETS.map(absolute));
+self.addEventListener('install',event=>{
+ event.waitUntil((async()=>{
+  const cache=await caches.open(CACHE_NAME);
+  try{
+   // Install atomically. A missing file leaves the previous worker active.
+   await Promise.all(ASSETS.map(async name=>{
+    const url=absolute(name),response=await fetch(new Request(url,{cache:'reload'}));
+    if(!response.ok||response.type==='opaque')throw new Error('Missing offline asset: '+name);
+    const type=response.headers.get('content-type')||'';
+    if((name.endsWith('.js')||name.endsWith('.css'))&&type.includes('text/html'))throw new Error('HTML instead of asset: '+name);
+    await cache.put(url,response);
+   }));
+  }catch(error){await caches.delete(CACHE_NAME);throw error;}
+  // No skipWaiting here: the user accepts an update; first installation activates normally.
+ })());
+});
+self.addEventListener('activate',event=>{
+ event.waitUntil((async()=>{
+  const keys=await caches.keys();
+  await Promise.all(keys.filter(k=>k.startsWith(CACHE_PREFIX)&&k!==CACHE_NAME).map(k=>caches.delete(k)));
+  await self.clients.claim();
+ })());
+});
+self.addEventListener('message',event=>{
+ if(event.data?.type==='SKIP_WAITING')event.waitUntil(self.skipWaiting());
+ if(event.data?.type==='STATUS')event.waitUntil((async()=>{
+  const cache=await caches.open(CACHE_NAME),present=await Promise.all(ASSETS.map(name=>cache.match(absolute(name))));
+  event.ports[0]?.postMessage({version:VERSION,revision:REVISION,ready:present.every(Boolean),assets:ASSETS.length});
+ })());
+});
+self.addEventListener('fetch',event=>{
+ if(event.request.method!=='GET')return;
+ const url=new URL(event.request.url),scope=new URL(self.registration.scope);
+ if(url.origin!==scope.origin||!url.pathname.startsWith(scope.pathname))return;
+ const normalized=new URL(url);normalized.search='';normalized.hash='';
+ const isEntry=url.pathname===scope.pathname||url.pathname===scope.pathname+'index.html';
+ if(event.request.mode==='navigate'&&isEntry){
+  event.respondWith((async()=>{
+   const cache=await caches.open(CACHE_NAME),response=await cache.match(absolute('./index.html'));
+   return response||fetch(event.request);
+  })());return;
+ }
+ if(assetURLs.has(normalized.href)){
+  event.respondWith((async()=>{
+   const cache=await caches.open(CACHE_NAME),response=await cache.match(normalized.href);
+   if(response)return response;
+   const net=await fetch(event.request);if(net.ok)await cache.put(normalized.href,net.clone());return net;
+  })());
+ }
+ // Other paths, external links and downloads are not silently replaced with HTML.
+});
