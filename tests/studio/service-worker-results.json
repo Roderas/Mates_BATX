@@ -1,0 +1,93 @@
+{
+  "environment": "Node event simulation, memory caches and local fetch doubles",
+  "results": [
+    {
+      "test": "Install caches every runtime resource",
+      "pass": true
+    },
+    {
+      "test": "Status confirms complete cache",
+      "pass": true
+    },
+    {
+      "test": "Installation does not force update",
+      "pass": true
+    },
+    {
+      "test": "Activate claims clients",
+      "pass": true
+    },
+    {
+      "test": "Offline root navigation",
+      "pass": true
+    },
+    {
+      "test": "Offline index with query",
+      "pass": true
+    },
+    {
+      "test": "Offline script request",
+      "pass": true
+    },
+    {
+      "test": "Offline icon request",
+      "pass": true
+    },
+    {
+      "test": "External request not intercepted",
+      "pass": true
+    },
+    {
+      "test": "Other repository not intercepted",
+      "pass": true
+    },
+    {
+      "test": "POST not intercepted",
+      "pass": true
+    },
+    {
+      "test": "Missing document not replaced with HTML",
+      "pass": true
+    },
+    {
+      "test": "Offline new solver engine",
+      "pass": true
+    },
+    {
+      "test": "Offline dedicated worker source",
+      "pass": true
+    },
+    {
+      "test": "Offline teacher guide separate page",
+      "pass": true
+    },
+    {
+      "test": "Missing update asset rejects install",
+      "pass": true
+    },
+    {
+      "test": "Failed install preserves previous cache",
+      "pass": true
+    },
+    {
+      "test": "Caches isolated between repository paths",
+      "pass": true
+    },
+    {
+      "test": "Old cache retained while update waits",
+      "pass": true
+    },
+    {
+      "test": "User accepts waiting update",
+      "pass": true
+    },
+    {
+      "test": "Activation deletes only own obsolete cache",
+      "pass": true
+    },
+    {
+      "test": "New worker reports ready",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "suite": "Static runtime and manifest checks",
+  "total": 72,
+  "passed": 72,
+  "failed": 0,
+  "resources": 32,
+  "results": [
+    {
+      "name": "index.html declares Catalan",
+      "pass": true
+    },
+    {
+      "name": "index.html has manifest",
+      "pass": true
+    },
+    {
+      "name": "index.html has viewport",
+      "pass": true
+    },
+    {
+      "name": "index.html local resource ./manifest.json",
+      "pass": true
+    },
+    {
+      "name": "index.html local resource ./favicon.ico",
+      "pass": true
+    },
+    {
+      "name": "index.html local resource ./icons/icon-180.png",
+      "pass": true
+    },
+    {
+      "name": "index.html local resource ./studio/styles.css",
+      "pass": true
+    },
+    {
+      "name": "index.html local resource ./studio/config.js",
+      "pass": true
+    },
+    {
+      "name": "index.html local resource ./studio/engine.js",
+      "pass": true
+    },
+    {
+      "name": "index.html local resource ./studio/graph.js",
+      "pass": true
+    },
+    {
+      "name": "index.html local resource ./studio/app.js",
+      "pass": true
+    },
+    {
+      "name": "index.html local resource ./studio/pwa.js",
+      "pass": true
+    },
+    {
+      "name": "index.html local resource ./icons/icon-48.png",
+      "pass": true
+    },
+    {
+      "name": "index.html no inline script bodies",
+      "pass": true
+    },
+    {
+      "name": "docent.html declares Catalan",
+      "pass": true
+    },
+    {
+      "name": "docent.html has manifest",
+      "pass": true
+    },
+    {
+      "name": "docent.html has viewport",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./manifest.json",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./favicon.ico",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./icons/icon-32.png",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./icons/icon-180.png",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./icons/icon-167.png",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./icons/icon-152.png",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./css/styles.css",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./css/pwa.css",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./js/utils.js",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./data/topics.js",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./data/examples.js",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./js/math.js",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./js/graph.js",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./js/tools.js",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./js/solver.js",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./js/app.js",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./js/pwa.js",
+      "pass": true
+    },
+    {
+      "name": "docent.html local resource ./icons/icon-48.png",
+      "pass": true
+    },
+    {
+      "name": "docent.html no inline script bodies",
+      "pass": true
+    },
+    {
+      "name": "Stable install identity",
+      "pass": true
+    },
+    {
+      "name": "Subdirectory-safe start and scope",
+      "pass": true
+    },
+    {
+      "name": "Standalone display",
+      "pass": true
+    },
+    {
+      "name": "PNG dimensions icons/icon-192.png",
+      "pass": true
+    },
+    {
+      "name": "PNG dimensions icons/icon-512.png",
+      "pass": true
+    },
+    {
+      "name": "PNG dimensions icons/maskable-192.png",
+      "pass": true
+    },
+    {
+      "name": "PNG dimensions icons/maskable-512.png",
+      "pass": true
+    },
+    {
+      "name": "Required any icons",
+      "pass": true
+    },
+    {
+      "name": "Maskable icons separate",
+      "pass": true
+    },
+    {
+      "name": "Apple icon dimensions",
+      "pass": true
+    },
+    {
+      "name": "Precache all resources exist",
+      "pass": true
+    },
+    {
+      "name": "Precache studio/engine.js",
+      "pass": true
+    },
+    {
+      "name": "Precache studio/app.js",
+      "pass": true
+    },
+    {
+      "name": "Precache studio/worker.js",
+      "pass": true
+    },
+    {
+      "name": "Precache studio/config.js",
+      "pass": true
+    },
+    {
+      "name": "Precache studio/styles.css",
+      "pass": true
+    },
+    {
+      "name": "Precache docent.html",
+      "pass": true
+    },
+    {
+      "name": "Cache fingerprint matches content",
+      "pass": true
+    },
+    {
+      "name": "JS syntax js/app.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax js/graph.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax js/math.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax js/pwa.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax js/solver.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax js/tools.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax js/utils.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax data/examples.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax data/topics.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax studio/app.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax studio/config.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax studio/engine.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax studio/graph.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax studio/pwa.js",
+      "pass": true
+    },
+    {
+      "name": "JS syntax studio/worker.js",
+      "pass": true
+    },
+    {
+      "name": "No font binaries shared",
+      "pass": true
+    },
+    {
+      "name": "New solver has no eval or Function",
+      "pass": true
+    },
+    {
+      "name": "No API secret input",
+      "pass": true
+    }
+  ]
+}

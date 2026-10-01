@@ -1,0 +1,809 @@
+{
+  "suite": "Engine and bundled examples",
+  "version": "2.0.0",
+  "passed": 200,
+  "failed": 0,
+  "total": 200,
+  "results": [
+    {
+      "name": "Parser: -x^2",
+      "pass": true
+    },
+    {
+      "name": "Parser: (-x)^2",
+      "pass": true
+    },
+    {
+      "name": "Parser: 2^3^2",
+      "pass": true
+    },
+    {
+      "name": "Parser: 2x+3(x+1)",
+      "pass": true
+    },
+    {
+      "name": "Parser: 2/3+5/6",
+      "pass": true
+    },
+    {
+      "name": "Parser: 2e-3*x",
+      "pass": true
+    },
+    {
+      "name": "Parser: x^(1/3)",
+      "pass": true
+    },
+    {
+      "name": "Parser: 3,5x",
+      "pass": true
+    },
+    {
+      "name": "Parser: sin(pi/2)",
+      "pass": true
+    },
+    {
+      "name": "Parser: ln(e)",
+      "pass": true
+    },
+    {
+      "name": "Rejects syntax: alert(1)",
+      "pass": true
+    },
+    {
+      "name": "Rejects syntax: window.x",
+      "pass": true
+    },
+    {
+      "name": "Rejects syntax: x; fetch(1)",
+      "pass": true
+    },
+    {
+      "name": "Rejects syntax: constructor(1)",
+      "pass": true
+    },
+    {
+      "name": "Rejects syntax: sin x",
+      "pass": true
+    },
+    {
+      "name": "Rejects syntax: x=>1",
+      "pass": true
+    },
+    {
+      "name": "Rejects syntax: <img src=x>",
+      "pass": true
+    },
+    {
+      "name": "Rejects syntax: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "pass": true
+    },
+    {
+      "name": "Rejects syntax: ((((((((((((((((((((((((((x)))",
+      "pass": true
+    },
+    {
+      "name": "Equation: 2x+3=9",
+      "pass": true
+    },
+    {
+      "name": "Equation: x^2-5x+6=0",
+      "pass": true
+    },
+    {
+      "name": "Equation: x^2-2=0",
+      "pass": true
+    },
+    {
+      "name": "Equation: x^2+1=0",
+      "pass": true
+    },
+    {
+      "name": "Equation: (x-1)^2=0",
+      "pass": true
+    },
+    {
+      "name": "Equation: (x^2-1)/(x-1)=0",
+      "pass": true
+    },
+    {
+      "name": "Equation: x/(x-1)=2",
+      "pass": true
+    },
+    {
+      "name": "Equation identity with exclusions",
+      "pass": true
+    },
+    {
+      "name": "Invalid real domain constant",
+      "pass": true
+    },
+    {
+      "name": "Inequality: x^2+1>0",
+      "pass": true
+    },
+    {
+      "name": "Inequality: x^2+1<0",
+      "pass": true
+    },
+    {
+      "name": "Inequality: x^2<=0",
+      "pass": true
+    },
+    {
+      "name": "Inequality: x^2<0",
+      "pass": true
+    },
+    {
+      "name": "Inequality: x^2-5x+6<=0",
+      "pass": true
+    },
+    {
+      "name": "Inequality: x^2-2<0",
+      "pass": true
+    },
+    {
+      "name": "Inequality: (x-1)/(x+2)>=0",
+      "pass": true
+    },
+    {
+      "name": "Inequality: x/x>0",
+      "pass": true
+    },
+    {
+      "name": "Derivative x^4-2x^2+5 at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative x^4-2x^2+5 at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative x^4-2x^2+5 at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative sin(x) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative sin(x) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative sin(x) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative cos(x) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative cos(x) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative cos(x) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative tan(x) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative tan(x) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative tan(x) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative exp(2x+1) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative exp(2x+1) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative exp(2x+1) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative ln(x^2+1) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative ln(x^2+1) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative ln(x^2+1) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative sqrt(x+2) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative sqrt(x+2) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative sqrt(x+2) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative atan(x) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative atan(x) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative atan(x) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative asin(x/2) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative asin(x/2) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative asin(x/2) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative acos(x/2) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative acos(x/2) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative acos(x/2) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative x*exp(x) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative x*exp(x) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative x*exp(x) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative sin(x^2) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative sin(x^2) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative sin(x^2) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative x^x at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative x^x at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative x^x at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative 2^x at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative 2^x at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative 2^x at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative ln(x)/x at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative ln(x)/x at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative ln(x)/x at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative x^(2/3) at 0.23",
+      "pass": true
+    },
+    {
+      "name": "Derivative x^(2/3) at 0.7",
+      "pass": true
+    },
+    {
+      "name": "Derivative x^(2/3) at 1.3",
+      "pass": true
+    },
+    {
+      "name": "Derivative traces product and chain",
+      "pass": true
+    },
+    {
+      "name": "Abs at zero: no ordinary tangent",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: 3x^2-4x+1",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: sin(x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: cos(2x+1)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: exp(3x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: 1/x",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: 1/(2x+3)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: 2x*cos(x^2)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: 2x/(1+x^2)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: sin(x)*cos(x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: sqrt(x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: 1/sqrt(x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: x*exp(x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: x^2*exp(2x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: x*cos(2x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: x^2*sin(3x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: ln(x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: ln(2x+3)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: tan(2x)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: 1/(1+x^2)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: (2x+1)/(x^2+x+1)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: 1/(x^2-1)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: 1/(x-2)^2",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: x^4/(x^2+1)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: e^x",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: 2^(3x+1)",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: sin(x)^2",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: cos(3x+2)^2",
+      "pass": true
+    },
+    {
+      "name": "Primitiva checked by differentiating: sin(pi*x)",
+      "pass": true
+    },
+    {
+      "name": "Unsupported primitive explicit, not nonexistence",
+      "pass": true
+    },
+    {
+      "name": "Definite integral: x^2 0..1",
+      "pass": true
+    },
+    {
+      "name": "Definite integral: sin(x) 0..pi",
+      "pass": true
+    },
+    {
+      "name": "Definite integral: exp(-x^2) 0..1",
+      "pass": true
+    },
+    {
+      "name": "Definite integral: sin(2*pi*x)^2 0..1",
+      "pass": true
+    },
+    {
+      "name": "Definite integral: sin(16*pi*x)^2 0..1",
+      "pass": true
+    },
+    {
+      "name": "Definite integral: abs(x) -1..1",
+      "pass": true
+    },
+    {
+      "name": "Definite integral: x^2 2..0",
+      "pass": true
+    },
+    {
+      "name": "Reject improper interval: 1/x",
+      "pass": true
+    },
+    {
+      "name": "Reject improper interval: 1/x^2",
+      "pass": true
+    },
+    {
+      "name": "Reject improper interval: 1/(x-0.1234)",
+      "pass": true
+    },
+    {
+      "name": "Reject improper interval: ln(x)",
+      "pass": true
+    },
+    {
+      "name": "Reject cancelled singularity in area",
+      "pass": true
+    },
+    {
+      "name": "Area positive in reversed interval",
+      "pass": true
+    },
+    {
+      "name": "Limit (x^2-1)/(x-1) to 1 undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit sin(x)/x to 0 undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit (1-cos(x))/x^2 to 0 undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit (exp(x)-1-x)/x^2 to 0 undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit ln(1+x)/x to 0 undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit (1+1/x)^x to inf undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit (3x^2+1)/(2x^2-7) to inf undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit 1/x to 0 undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit 1/x to 0 right",
+      "pass": true
+    },
+    {
+      "name": "Limit 1/x to 0 left",
+      "pass": true
+    },
+    {
+      "name": "Limit 1/x^2 to 0 undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit exp(x) to 1 undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit sin(x) to 0 undefined",
+      "pass": true
+    },
+    {
+      "name": "Limit x^2 to pi undefined",
+      "pass": true
+    },
+    {
+      "name": "Tangent at pi/2 is not finite direct substitution",
+      "pass": true
+    },
+    {
+      "name": "Unsupported oscillatory limit remains exploration",
+      "pass": true
+    },
+    {
+      "name": "expand: (x+1)^3",
+      "pass": true
+    },
+    {
+      "name": "expand: x^3-x",
+      "pass": true
+    },
+    {
+      "name": "expand: x^4-5x^2+4",
+      "pass": true
+    },
+    {
+      "name": "expand: 3x^2-12",
+      "pass": true
+    },
+    {
+      "name": "expand: -2x^2+8",
+      "pass": true
+    },
+    {
+      "name": "expand: 0",
+      "pass": true
+    },
+    {
+      "name": "factor: (x+1)^3",
+      "pass": true
+    },
+    {
+      "name": "factor: x^3-x",
+      "pass": true
+    },
+    {
+      "name": "factor: x^4-5x^2+4",
+      "pass": true
+    },
+    {
+      "name": "factor: 3x^2-12",
+      "pass": true
+    },
+    {
+      "name": "factor: -2x^2+8",
+      "pass": true
+    },
+    {
+      "name": "factor: 0",
+      "pass": true
+    },
+    {
+      "name": "Simplification preserves exclusions",
+      "pass": true
+    },
+    {
+      "name": "System x+y=3;x-y=1",
+      "pass": true
+    },
+    {
+      "name": "System x+y=2;2x+2y=4",
+      "pass": true
+    },
+    {
+      "name": "System x+y=2;2x+2y=5",
+      "pass": true
+    },
+    {
+      "name": "System 2x+y-z=8;-3x-y+2z=-11;-2x+y+2z=-3",
+      "pass": true
+    },
+    {
+      "name": "System x/2+y=1;x-y=1",
+      "pass": true
+    },
+    {
+      "name": "Nonlinear system rejected",
+      "pass": true
+    },
+    {
+      "name": "Even root numerical search",
+      "pass": true
+    },
+    {
+      "name": "Numerical poles not called roots",
+      "pass": true
+    },
+    {
+      "name": "Study flags local non-exhaustiveness",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Quadràtica amb dues arrels",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Equació lineal",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Sense arrels reals",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Cerca numèrica",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Quocient i domini",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Taula de signes",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Solució aïllada",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Simplificar i conservar domini",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Fraccions exactes",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Cub d’un binomi",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Producte de tres factors",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Factor comú",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Quatre factors lineals",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Gauss de dues incògnites",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Sistema 3x3",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Infinites solucions",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Producte i tangent",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Quocient i cadena",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Segona derivada",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Canvi de variable",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Integració per parts",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Arctangent",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Logaritme i domini",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Barrow de 0 a pi",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Aproximació numèrica",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Integral polinòmica",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Límit trigonomètric",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Indeterminació 0/0",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Laterals diferents",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Límit exponencial",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Paràbola i recta",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Canvi de corba superior",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Monotonia i extrems",
+      "pass": true
+    },
+    {
+      "name": "Bundled example: Creixement i decreixement",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "suite": "Chromium injected UI and real Blob workers",
+  "version": "2.0.0",
+  "limitations": "Administrator blocks all URL navigation. No real installed service worker, no actual reload offline, no device installation tested. Storage double; clipboard and print stubbed as noted in code.",
+  "passed": 81,
+  "failed": 0,
+  "total": 81,
+  "results": [
+    {
+      "name": "Initial worker result",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Native MathML displayed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sidebar operations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Math preview nonempty",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Quadràtica amb dues arrels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Equació lineal",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Sense arrels reals",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Cerca numèrica",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Quocient i domini",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Taula de signes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Solució aïllada",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Simplificar i conservar domini",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Fraccions exactes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Cub d’un binomi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Producte de tres factors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Factor comú",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Quatre factors lineals",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Gauss de dues incògnites",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Sistema 3x3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Infinites solucions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Producte i tangent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Quocient i cadena",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Segona derivada",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Canvi de variable",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Integració per parts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Arctangent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Logaritme i domini",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Barrow de 0 a pi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Aproximació numèrica",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Integral polinòmica",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Límit trigonomètric",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Indeterminació 0/0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Laterals diferents",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Límit exponencial",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Paràbola i recta",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Canvi de corba superior",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Monotonia i extrems",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "UI example: Creixement i decreixement",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Derivative result uses MathML",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Steps rendered",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Reveal next step",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Expand all steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Collapse all steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Notebook saved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Duplicate not saved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Notebook opens",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Note persisted",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON export",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Notebook search",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "History capped",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Copy result content",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Print reveals steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Print hides controls",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Keyboard wraps selection",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Keyboard undo",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Keyboard hide",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Invalid input error",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Improper integral rejected in UI",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Unsupported primitive marked",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Graph zoom",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Graph reset",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Graph visibility toggle",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Graph PNG download",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Dark theme toggles",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Install fallback guidance",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Saved entries restored",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Local worker with network disabled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Invalid backup rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Valid backup imported",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "No page overflow at 1440",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Solve accessible at 1440",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "No page overflow at 1024",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Solve accessible at 1024",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "No page overflow at 768",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Solve accessible at 768",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "No page overflow at 390",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Solve accessible at 390",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mobile selector works",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "No page overflow at 320",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Solve accessible at 320",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "No unhandled JS exceptions",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}
